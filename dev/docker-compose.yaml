@@ -31,7 +31,5 @@ services:
       - ../back-end:/usr/src/app
     depends_on:
       - nginx
-    ports:
-      - 3000:3000
     networks:
       - scg
