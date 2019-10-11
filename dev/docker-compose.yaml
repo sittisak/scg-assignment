@@ -1,0 +1,37 @@
+version: '3'
+
+networks:
+  scg:
+
+services:
+  nginx:
+    build: ./nginx
+    container_name: nginx.scg
+    ports:
+      - 8201:8201
+    networks:
+      - scg
+  web:
+    build: ../web
+    container_name: web.scg
+    volumes:
+      - ../web:/usr/src/app
+    depends_on:
+      - nginx
+      - back-end
+    networks:
+      - scg
+  back-end:
+    build: ../back-end
+    container_name: back-end.scg
+    command: npm run start:dev
+    environment:
+      NODE_ENV: 'local'
+    volumes:
+      - ../back-end:/usr/src/app
+    depends_on:
+      - nginx
+    ports:
+      - 3000:3000
+    networks:
+      - scg
