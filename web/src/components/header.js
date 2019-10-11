@@ -6,13 +6,13 @@ import Nav from 'react-bootstrap/Nav'
 
 const Header = () => {
   return (
-		<Navbar bg="dark" variant="dark">
+		<Navbar bg='dark' variant='dark'>
 			<NavLink to={'/'}>
-				<Navbar.Brand as="li">Home</Navbar.Brand>
+				<Navbar.Brand as='li'>Home</Navbar.Brand>
 			</NavLink>
-			<Nav className="mr-auto">
+			<Nav className='mr-auto'>
 				<NavLink to={'/cv'}>
-					<Nav.Link as="li">CV</Nav.Link>
+					<Nav.Link as='li'>CV</Nav.Link>
 				</NavLink>
 			</Nav>
 		</Navbar>

@@ -188,23 +188,23 @@ const Resume = () => {
           </Col>
           <Col md={9}>
             <TitleWithParagraph 
-              title="Personal statement"
+              title='Personal statement'
               paragraph={cvData.personalStatement}/>
-            <TitleWithChildrenr title="Technical Skills Highlight">
+            <TitleWithChildrenr title='Technical Skills Highlight'>
               <SubtitleWithUl
-                subTitlePrimary="Blockchain"
+                subTitlePrimary='Blockchain'
                 list={cvData.technicalSkillsHighlight.blockchain}/>
               <SubtitleWithUl
-                subTitlePrimary="Front-end"
+                subTitlePrimary='Front-end'
                 list={cvData.technicalSkillsHighlight.frontEnd}/>
               <SubtitleWithUl
-                subTitlePrimary="Back-end"
+                subTitlePrimary='Back-end'
                 list={cvData.technicalSkillsHighlight.backEnd}/>
               <SubtitleWithUl
-                subTitlePrimary="Other"
+                subTitlePrimary='Other'
                 list={cvData.technicalSkillsHighlight.Other}/>
             </TitleWithChildrenr>
-            <TitleWithChildrenr title="Experience Highlight">
+            <TitleWithChildrenr title='Experience Highlight'>
               {cvData.experienceHighlight.map(experience => (
                 <SubtitleWithUl
                   subTitlePrimary={`${experience.title}`}
@@ -212,14 +212,14 @@ const Resume = () => {
                   list={experience.experience}/>
               ))}
             </TitleWithChildrenr>
-            <TitleWithChildrenr title="Education">
+            <TitleWithChildrenr title='Education'>
               {cvData.education.map((education) => (
                 <SubtitleWithUl
                   subTitlePrimary={`${education.title}`}
                   list={[education.description]}/>
               ))}
             </TitleWithChildrenr>
-            <TitleWithChildrenr title="Activity">
+            <TitleWithChildrenr title='Activity'>
               <Ul list={cvData.activity} />
             </TitleWithChildrenr>
           </Col>
